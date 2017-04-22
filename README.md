@@ -1,8 +1,11 @@
 # Adobe Camera Raw の Index.dat を書き換えるやつ
 
 Adobe Camera Raw はいろんなカメラの RAW ファイルに対応していますが、Panasonicのカメラに関してはカメラプロファイルが「Adobe Standard」しか用意されておらず、ちょっと残念な思いをしていました。
+
 ところが DC-GH5 から状況が変わり、風景やポートレート、シネライクDなどのカメラプロファイルが使えるようになりました。
+
 このツールはプロファイルを他機種でも使えるように、ファイルを書き換えるツールです。
+
 もちろん、他機種用のプロファイルを勝手に使うだけなので結果がどうなるかは知りません。
 
 ## 使い方
@@ -32,6 +35,7 @@ Canon EOS 10D
 Canon EOS 1100D
   :
 ```
+リストにない機種を指定することもできますが、おそらく期待通りに動作しません。
 
 コピー元とコピー先のモデル名を指定して、新しい Index.dat を生成します。
 ```
@@ -49,3 +53,5 @@ Panasonic DC-GH5 => Panasonic DMC-GX85
  /Library/Application Support/Adobe/CameraRaw/CameraProfiles/Camera/Panasonic DC-GH5/Panasonic DC-GH5 Camera Vivid.dcp
 ```
 生成された Index.dat を元の場所にコピーして上書きします。
+
+これで完了です。BridgeやLightroomを再起動してください。もしも反映されていない場合は、一度ログオフしてみてください。
